@@ -1,7 +1,7 @@
 {% extends 'partials/nav.html'%}
 
 {% block content %}
-    <h1> Create a new Task </h1>
+    <h1> Create new Project</h1>
 
     <form method="POST"> 
         {% csrf_token %}
@@ -10,4 +10,5 @@
             Save
         </button>
     </form>
+
 {% endblock %}
