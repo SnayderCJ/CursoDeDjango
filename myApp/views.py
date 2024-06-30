@@ -1,6 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from .models import Project, Task
 from django.shortcuts import render
+from .forms import CreateNewTask
 
 # Create your views here.
 
@@ -31,4 +32,9 @@ def tasks(request):
     tasks = Task.objects.all()
     return render(request, 'tasks.html', {
         'tasks': tasks
+    })
+
+def create_Task(reques):
+    return render(reques, 'create_task.html', {
+        'form': CreateNewTask()
     })
